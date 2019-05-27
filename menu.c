@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "roomcreation.h"
 
 void stat (int *pointeurSurTab);
 
@@ -29,6 +29,7 @@ int main(void)
 case 1:
 	printf("Votre choix : Ajouter une salle.\r\n");
 	// Ajouter une salle, saisir un nombre de sièges
+	createroom();
 	
 	
 
