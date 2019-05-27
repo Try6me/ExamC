@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 
+void stat (int tableau[][]);
+
 int main(void)
 {
 
@@ -42,7 +44,8 @@ case 2:
     fichier = fopen("test.txt", "r");
  
     if (fichier != NULL)
-    {
+    {	
+    	printf("Voici la salle :\n");
         // Boucle de lecture des caractères un à un
         do
         {
@@ -81,7 +84,7 @@ case 5:
 	// Afficher la liste des salles et demander un choix, demander ensuite la stat voulue
 	
 	
-	
+	stat(salle1);
 
 	break;
 
@@ -90,4 +93,31 @@ default:
 	scanf("%d", &choix);
 }
 	}
+}
+
+
+void stat (int tableau[][])
+{
+
+int v_count = 0;
+int tot_count = 0; 
+int tableau[taille1][taille2];
+int i,j;
+float pourcent;
+
+for(i=0 ; i < taille1 ; i++)
+{               
+      for(j=0 ; j < taille2 ; j++)
+      {         
+			v_count = v_count + 1;
+			tot_count = tot_count + 1;
+	  }
+}
+	
+pourcent = 100-((v_count/tot_count)*100);
+
+printf("Le nombre de siège total est : %d", tot_count);
+printf("Le nombre de siège vide est : %d", v_count);
+printf("Les sièges sont occupés à %f %", pourcent);
+
 }
