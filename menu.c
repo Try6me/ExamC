@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-void stat (int tableau[][]);
+void stat (int *pointeurSurTab);
 
 int main(void)
 {
@@ -36,7 +36,7 @@ case 1:
 
 case 2:
 	printf("Votre choix : Charger une salle à partir d'un fichier.\r\n");
-	// Charger une salle avec un fichier existant, localiser le fichier 
+	printf("Fichier : test.txt --> Chargé");
 	
 	FILE* fichier = NULL;
     int caractereActuel = 0;
@@ -46,18 +46,14 @@ case 2:
     if (fichier != NULL)
     {	
     	printf("Voici la salle :\n");
-        // Boucle de lecture des caractères un à un
         do
         {
-            caractereActuel = fgetc(fichier); // On lit le caractère
-            printf("%c", caractereActuel); // On l'affiche
-        } while (caractereActuel != EOF); // On continue tant que fgetc n'a pas retourné EOF (fin de fichier)
+            caractereActuel = fgetc(fichier); 
+            printf("%c", caractereActuel); 
+        } while (caractereActuel != EOF); 
  
         fclose(fichier);
-    }
-	
-
-
+    }	
 	break;
 	
 	
@@ -96,12 +92,12 @@ default:
 }
 
 
-void stat (int tableau[][])
+void stat (int *pointeurSurTab)
 {
 
 int v_count = 0;
 int tot_count = 0; 
-int tableau[taille1][taille2];
+int Tab[taille1][taille2]
 int i,j;
 float pourcent;
 
