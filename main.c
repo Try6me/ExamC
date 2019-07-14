@@ -17,7 +17,7 @@ int main()
 
     printf("1/ Create, delete, edit, view account info \n");
     printf("2/ Create, delete, edit, view  bank accounts info\n");
-    printf("3/ Make deposit, withdraw or transfer \n");
+    printf("3/ Deposit, withdraw or transfer \n");
 
 
   while (scanf("%d", &choice) != 1) {
